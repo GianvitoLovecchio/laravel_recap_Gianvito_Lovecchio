@@ -1,0 +1,30 @@
+.font-form{
+    font-size: medium;
+}
+.text-area-size{
+    width: 100%;
+    height: 35%;
+}
+.custom-btn{
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: grey;
+    color:whitesmoke;
+    text-align: center;
+    width: 13vh;
+    height: 30px;
+    text-decoration: none;
+    align-self: center;
+}
+.detail-title{
+font-size: clac(2vh + 5px);
+font-weight: 500;
+}
+.detail-text{
+font-size: calc(1vh + 15px);
+font-weight: 400;
+}
+.category-custom{
+    width: auto;
+
+}

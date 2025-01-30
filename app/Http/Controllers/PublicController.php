@@ -18,7 +18,4 @@ class PublicController extends Controller
         return view('product.add');
     }
 
-    public function goToShow() {
-        return view('product.show');
-    }
 }
