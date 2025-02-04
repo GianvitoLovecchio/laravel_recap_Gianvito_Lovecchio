@@ -10,6 +10,7 @@ class Product extends Model
     [
         'name',
         'category',
+        'producer',
         'description',
         'price',
         'image',
