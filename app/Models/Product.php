@@ -3,14 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
+    public function user(): BelongsTo{
+        return $this->belongsTo((User::class));
+    }
+
     protected $fillable = 
     [
         'name',
         'category',
-        'producer',
+        'user_id',
         'description',
         'price',
         'image',
@@ -20,4 +25,6 @@ class Product extends Model
         'year',
         'weight'
     ];
+
+    
 }

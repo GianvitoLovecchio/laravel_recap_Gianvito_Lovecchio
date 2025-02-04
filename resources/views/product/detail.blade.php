@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    @if (Auth::user()->name === $product->producer)
+    @if (Auth::user()->id === $product->user_id)
         <div class="container p-5">
             <div class="row justify-content-around">
                 <col-6 class="w-25"> <a href="{{ route('edit.element', compact('product')) }}"

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SellerController;
 
 //rotta HOMEPAGE
 Route::get('/', [PublicController::class, 'goToHomepage'])->name('homepage');
@@ -28,3 +29,9 @@ Route::get('modifica/{product}',[ProductController::class,'goToEditElement'])->n
 Route::put('aggiorna/{product}',[ProductController::class,'elementUpdate'])->name('put.element');
 //rotta per ELIMINARE il record
 Route::delete('cancella/{product}',[ProductController::class,'elementDelete'])->name('delete.element');
+
+//SELLER
+//rotta POST per l'invio dei dati seller
+Route::post('registrazione_finale\invio',[SellerController::class,'create'])->name('seller.post');
+//rotta per la visualizzazione del profilo utente   
+Route::get('registrazione_finale',[SellerController::class,'goToFInalRegistration'])->name('seller.finalRegistration');

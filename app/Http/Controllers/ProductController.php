@@ -21,11 +21,9 @@ class ProductController extends Controller
 
     public function productSubmit(ProductRequest $request)
     {
-
-        Product::create([
+        Auth::user()->Product()->create([
             'name' => $request->input('name'),
             'category' => $request->input('category'),
-            'producer'=>Auth::user()->name,
             'description' => $request->input('description'),
             'price' => $request->input('price'),
             'brand' => $request->input('brand'),
@@ -54,7 +52,7 @@ class ProductController extends Controller
         $product->update([
             'name' => $request->input('name'),
             'category' => $request->input('category'),
-            'producer'=>Auth::user()->name,
+            'user_id'=>Auth::user()->id,
             'description' => $request->input('description'),
             'price' => $request->input('price'),
             'brand' => $request->input('brand'),

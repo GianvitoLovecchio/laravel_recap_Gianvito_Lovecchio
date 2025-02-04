@@ -17,7 +17,7 @@
     <div class="container w-50">
         <div class="row justify-content-center">
             <div class="col-12">
-                <form method="POST" action="{{ route('register') }}"
+                <form method="POST" action="{{ route('register')}}"
                     class="bg-secondary-subtle border rounded border-dark py-4 px-3 mb-5 font-form align-self-center">
                     @csrf
                     <div class="mb-3">
