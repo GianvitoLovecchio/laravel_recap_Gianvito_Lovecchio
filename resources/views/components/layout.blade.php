@@ -10,9 +10,6 @@
 </head>
 
 <body>
-
-    {{ $slot }}
-
     {{-- eventuale messaggio di corretto invio della mail --}}
     @if (session('emailSent'))
         <div class="alert alert-success alert-dismissible fade show text-center mx-auto w-25" role="alert">
@@ -28,6 +25,8 @@
         </div>
     @endif
 
+    {{ $slot }}
+    
 </body>
 
 </html>

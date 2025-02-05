@@ -28,3 +28,26 @@ font-weight: 400;
     width: auto;
 
 }
+
+/* HOMEPAGE */
+.list_homepage{
+    list-style-type: none;
+};
+
+.select_homepage{
+    border: 2px solid grey;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.card_home_custom{
+    /* max-height:  60%; */
+    /* width: 30vw; */
+    height: 45vh;
+}
+
+.home_img_card_custom{
+   width: 20vw;
+   aspect-ratio: 3/2;
+   padding: 2vh;
+}

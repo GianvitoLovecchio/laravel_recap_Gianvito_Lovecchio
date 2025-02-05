@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Routing\Controllers\Middleware;
@@ -17,14 +18,15 @@ class PublicController extends Controller implements HasMiddleware
     }
 
     public function goToHomepage() {
-        return view('homepage');
+        $products = Product::all();
+        return view('homepage', compact('products'));
     }
 
-    public function goToCOntact() {
+    public function goToContact() {
         return view('contact.contact');
     }
 
-    public function goToadd() {
+    public function goToAdd() {
         return view('product.add');
     }
 

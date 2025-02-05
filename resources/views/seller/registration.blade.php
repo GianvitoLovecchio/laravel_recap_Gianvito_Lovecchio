@@ -1,6 +1,17 @@
 <x-layout>
     <x-navbar />
-    {{-- @if (Auth::user()->seller->compiled == false || Auth::user()->seller->compiled == null) --}}
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    
+    @if (!Auth::user()->seller)
 
     <form method="POST" action="{{ route('seller.post') }}"
         class=" container mt-5 w-50 bg-secondary-subtle border rounded border-dark py-4 px-3 mb-5 font-form d-flex justify-content-center">
@@ -51,7 +62,7 @@
             </div>
     </form>
     </div>
-    {{-- @else
+    @else
 
     <div class="my-5">
         <h1 class="display-2 text-center">Sezione gia compilata</h1>
@@ -59,5 +70,5 @@
             <a href="{{route('homepage')}}" class="m-4 w-25 btn btn-secondary">HOMEPAGE</a>
         </div>
     </div>
-    @endif --}}
+    @endif
 </x-layout>

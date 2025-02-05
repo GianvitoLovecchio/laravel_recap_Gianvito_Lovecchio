@@ -29,7 +29,10 @@
             </li>
             @endguest
             @auth
-            <li class="nav-link fw-bold active text-white fs-5 mx-4">Ciao, {{Auth::user()->name}}!</li>
+            <li class="nav-link fw-bold active text-white fs-5 mx-1">Ciao, {{Auth::user()->name}}!</li>
+            <li>
+                <a href="{{route('user.products')}}" class="nav-link fw-bold active text-white fs-5 mx-1">I miei Prodotti</a>
+            </li>
             <li>
                 <form method="POST" action="{{route('logout')}}">
                     @csrf

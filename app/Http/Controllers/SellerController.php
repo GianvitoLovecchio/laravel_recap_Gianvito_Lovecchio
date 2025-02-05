@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Seller;
 use Illuminate\Http\Request;
+use App\Http\Requests\SellerRequest;
 use Illuminate\Support\Facades\Auth;
 
 class SellerController extends Controller
 {
     public function goToFInalRegistration(){
+        
         return view('seller.registration');
     }
     /**
@@ -22,7 +24,7 @@ class SellerController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create(SellerRequest $request)
     {
         Auth::user()->seller()->create([
             'companyName'=>$request->input('companyName'),

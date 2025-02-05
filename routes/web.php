@@ -35,3 +35,5 @@ Route::delete('cancella/{product}',[ProductController::class,'elementDelete'])->
 Route::post('registrazione_finale\invio',[SellerController::class,'create'])->name('seller.post');
 //rotta per la visualizzazione del profilo utente   
 Route::get('registrazione_finale',[SellerController::class,'goToFInalRegistration'])->name('seller.finalRegistration');
+//rotta per mostrarei prodotti del cliente
+Route::get('utente/prodotti',[ProductController::class,'goToUserProducts'])->name('user.products');

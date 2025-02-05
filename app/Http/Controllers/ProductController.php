@@ -69,4 +69,9 @@ class ProductController extends Controller
         $product->delete();
         return redirect(route('product.show'))->with('message','Articolo eliminato correttamente');
     }
+
+    public function goToUserProducts(){
+        $product=Product::all();
+        return view ('product.user_products',compact('product'));
+    }
 }

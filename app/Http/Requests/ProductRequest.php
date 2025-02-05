@@ -21,7 +21,6 @@ class ProductRequest extends FormRequest
     {
         return [
             'name'=>"required|min:4",
-            'category'=>"required|min:4",
             'description'=>"required|min:10|max:200",
             'price'=>"required|numeric|min:1",
             'image'=>"nullable|image",
